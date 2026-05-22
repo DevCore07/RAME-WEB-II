@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Novo Projeto</title>
+    </head>
+    <body>
+        <form action="/home" method="POST">
+            {% csrf_token %}
+            <label for="eventos">Eventos: </label>
+            <input type="text" id="eventos" name="eventos"><br><br>
+
+            <label for="local">Local: </label>
+            <input type="text" id="local" name="local"><br>
+            
+            <button type="submit">Enviar aqui!</button>
+
+        </form>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>home</title>
+    </head>
+    <body>
+        <h1>Eventos em destaque</h1>
+        <table border="1">
+            <tr>
+                <th>Evento</th>
+                <th>Local</th>
+            </tr>
+            {% for item in lista %}
+                <tr>
+                        <td>{{ item.Eventos}}</td>
+                        <td>{{ item.Local}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
