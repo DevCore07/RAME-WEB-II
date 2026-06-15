@@ -1,0 +1,293 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+}
+
+
+main {
+    display: flex;
+    height: 100vh;
+    min-height: 700px;
+
+    background-color: white;
+}
+
+
+.mainEscuro {
+    background-color: #0f1419;
+
+}
+
+.container_left, .container_right {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+
+    padding: 0px 50px;
+}
+
+.img_background {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    row-gap: 20px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 5px;
+    z-index: 1;
+}
+
+.logo_img {
+    width: 100%;
+}
+.sigla_plataforma {
+    font-size: 45px;
+    z-index: 1;
+
+}
+
+.nome_plataforma {
+    font-size: 20px;
+    z-index: 1;
+    font-weight: 500;
+}
+
+.container_left {
+    background-color: rgb(51, 122, 51);
+    row-gap: 20px;
+    color: white;
+}
+
+.lista_beneficios {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    z-index: 1;
+    font-size: 15px;
+
+}
+
+.container_right {
+    align-items: center;
+    
+}
+
+.container_right .container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 60%;
+}
+
+.container {
+    max-width: 530px;
+}
+
+.bem_vindo {
+    font-size: 30px;
+}
+
+.msg {
+    font-size: 15px;
+    color: #6b7280;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    padding: 30px 35px;
+    box-shadow: 0px 7px 10px 0.1px #d4d5d6;
+    gap: 20px;
+}
+
+
+label {
+    font-size: 13px;
+    font-weight: bold;
+}
+.parte_matricula, .parte_senha {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dica {
+    font-size: 10px;
+    color: #707070;
+}
+
+input {
+    height: 50px;
+    border-radius: 12px;
+    border: 1px solid #d4d5d6;
+    padding: 0px 10px;
+    background-color: transparent;
+}
+
+.btn_formulario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: #128243;
+    border: none;
+    border-radius: 15px;
+    padding: 15px 5px;
+    gap: 10px;
+    cursor: pointer;
+    transition: 0.1s ease;
+}
+
+.btn_formulario:hover {
+    scale: 1.05;
+}
+
+img {
+    width: 20px;
+}
+
+.botao {
+    display: flex;
+    justify-content: center;
+ 
+}
+
+.btn_tema {
+    border: none;
+    background-color: transparent;
+    color: #6b7280;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn_tema:hover {
+    color: black;
+}
+
+.mainEscuro .btn_tema:hover {
+    color: white;
+}
+
+.mainEscuro .sigla_plataforma {
+    color: white;
+}
+
+
+.mainEscuro .container_left {
+    background-color: #0b8140;
+    row-gap: 20px;
+    color: white;
+}
+
+.mainEscuro .bem_vindo {
+    color: white;
+}
+
+.mainEscuro form {
+    border-color: #374151;
+    box-shadow: 0px 7px 10px 0.1px  #0e1116;
+}
+
+.mainEscuro label {
+    color: white;
+}
+
+.mainEscuro form .dica {
+    color: #9ca3af;
+}
+
+.mainEscuro form input {
+    border-color: #374151;
+    color: white;
+}
+
+.mainEscuro .btn_formulario {
+    background-color: #10b67f;
+}
+
+@media screen and (max-width: 950px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 0px;
+        gap: 20px;
+    }
+
+    .container_left, .mainEscuro .container_left{
+        align-items: center;
+        background-color: transparent;
+    }
+
+    .img_background {
+        display: none;
+    }
+
+    .info {
+        align-items: center;
+        width: 100%;
+
+    }
+
+    .sigla_plataforma {
+        color:#1a1a1a;
+        font-size: 40px;
+    }
+
+    .nome_plataforma {
+        color: #6b7280;
+        font-size: 15px;
+        text-align: center;
+    }
+
+
+    .lista_beneficios {
+        display: none;
+    }
+
+    .msg_saudacao {
+        display: none;
+    }
+
+    .container_right {
+        align-items: center;
+        
+    }
+
+    .container {
+        width: 100%;
+        min-width: 450px;
+    }
+    
+}
+

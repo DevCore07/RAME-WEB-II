@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'login/css/style.css' %}">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div class="container_left">
+            <img class="img_background" src="{% static 'login/img/foto_tela.jpeg' %}" alt="">
+            <div class="logo">
+                <img class="logo_img" src="{% static 'login/img/foto_devcore_verde.jpeg' %}" alt="">
+            </div>
+            <div class="info">
+                <h1 class="sigla_plataforma">RAME</h1>
+                <h3 class="nome_plataforma">Rede Alimentar de Monitoramento Estudantil</h3>
+            </div>
+            <div class="lista_beneficios">
+                <div class="beneficio-item">
+                    ✓ Gestão personalizada de restrições alimentares
+                </div>
+
+                <div class="beneficio-item">
+                    ✓ Cardápios semanais com alertas em tempo real
+                </div>
+
+                <div class="beneficio-item">
+                    ✓ Interface moderna e intuitiva
+                </div>
+            </div>
+        </div>
+        <div class="container_right">
+            <div class="container">
+                <div class="msg_saudacao">
+                    <h1 class="bem_vindo">
+                        Bem-vindo!
+                    </h1>
+                    <p class="msg">
+                        Entre com suas credenciais para acessar o sistema
+                    </p>
+                </div>
+                <div class="formulario">
+                    <form method="POST">
+                        {% csrf_token %}
+                        <div class="parte_matricula">
+                            <label for="matricula" class="matricula">Matrícula</label>
+                            <input type="text" name="matricula" id="matricula" placeholder="Digite sua matrícula" required>
+                            <p class="dica">Dica: Use "N" no início para entrar como nutricionista</p>
+                        </div>
+
+                        <div class="parte_senha">
+                            <label for="senha" class="senha">Senha</label>
+                            <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
+                        </div>
+
+                        <button type="submit" class="btn_formulario">
+                            <img src="{% static 'login/img/entry-svgrepo-com (1).svg' %}" alt="">
+                            <p>Entrar no Sistema</p>
+                        </button>
+                    </form>
+                </div>
+                <div class="botao">
+                    <button class="btn_tema">
+                        Modo Escuro
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+   
+    <script src="{% static 'login/js/script.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,399 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: rgb(248,249,250);
+    margin: 0px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(229,231,235);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    height: 100px;
+}
+
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user {
+    display: flex;
+    gap: 15px;
+    
+}
+
+#btn-decoracao {
+    border-right: solid 0.5px;
+    border-color: rgb(242, 243, 245);
+}
+
+.bt-tema {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: rgb(255, 255, 255);
+}
+
+.bt-tema img {
+    width: 20px;
+}
+
+.menu-user {
+    border: none;
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgb(232, 245, 233);
+    color: rgb(127, 189, 151);
+}
+
+.user img {
+    width: 20px;
+}
+
+.contaiter {
+    display: flex;
+    padding-top: 100px;
+}
+
+.painelbaixo {
+    display: none;
+    padding: 5px 10px;
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.painelesquerdo {
+    background-color: rgb(255,255,255);
+    border-right: 1px solid rgb(229,231,235);
+    width: 250px;
+    min-width: 250px;
+}
+
+.botaoPainel {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    gap: 20px;
+    width: 90%;
+    height: 5vh;
+    border: 1px solid rgb(229,231,235);
+    border-radius: 15px;
+    margin: 5%;
+}
+
+#btn-inicio {
+    background-color: #238b50;
+    color: white;
+}
+
+.botaoPainel img {
+    width: 30px;
+    height: 30px;
+}
+
+.paineldireito {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(248,249,250);
+    gap: 2%; 
+    width: 90vw;
+    min-width: 30vw;
+    margin-top: 30px;
+    padding: 5px;
+    /* gambiarra painel esquerdo encostar  na parte inferior */
+    height: auto;
+}
+
+
+.conjunto1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 65vw;
+    min-width: 30vw;
+
+}
+
+#q1 {
+    background-color: rgba(237, 243, 242);
+    border: solid rgba(192, 218, 205) 1px;
+    border-radius: 15px;
+    height: 110%;
+    padding: 16px;
+}
+
+#q1 p{
+    color: rgba(107, 114, 128);
+}
+
+#q2 {
+    background-color: rgba(255, 255, 255);
+    border: solid rgba(229, 231, 235) 1px;
+    border-radius: 15px;
+    height: 100%;
+    box-shadow: 0px 3px 5px 0px rgb(216, 216, 216);
+    transition: 0.2s ease;
+}
+
+#q2:hover {
+    box-shadow: 0px 7px 7px 0.4px rgb(216, 216, 216);
+}
+
+.q20 img {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(230,242,235);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.q20 {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.q20 h1 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.conjunto3 {
+    min-width: 65vw;
+    min-height: 20vh;
+    display: flex;
+}
+
+.conjunto2 {
+    display: flex;
+    gap: 10px; 
+    width: 65vw;
+    justify-content: center;
+}
+
+#q3 {
+    background-color: rgba(255, 255, 255);
+    border: solid rgb(235, 229, 229) 1px;
+    border-radius: 15px;
+    width: 50%;
+    min-height: 43vh;
+    box-shadow: 0px 3px 5px 0px rgb(216, 216, 216);
+    transition: 0.2s ease;
+}
+
+#q3:hover {
+    box-shadow: 0px 7px 7px 0.4px rgb(216, 216, 216);
+}
+
+#dia-semana {
+    color: rgb(119, 122, 128);
+    margin-left: 20px;
+}
+
+.q30 img {
+    width: 45px;
+    height: 45px;
+    background-color: rgb(230,242,235);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.q30 {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.q30 h1 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.q3030 {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    gap: 10px;
+}
+
+
+.q3030 img {
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+}
+
+.q3031 {
+    background-color: rgba(243, 250, 244);
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    height: 80px;
+    gap: 10px;
+}
+
+.q3031 img{
+    width: 70px;
+    height: 70px;
+    padding: 5px;
+}
+
+#q4 {
+    background-color: rgba(230, 240, 235);
+    border: solid rgba(191, 218, 204) 1px;
+    border-radius: 15px;
+    width: 50%;
+    /* min-height: 42vh; */
+    box-shadow: 0px 3px 5px 0px rgb(216, 216, 216);
+    transition: 0.2s ease;
+}
+
+#q4:hover {
+    box-shadow: 0px 7px 7px 0.4px rgb(216, 216, 216);
+}
+
+.q40 {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+
+.q40 img {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(183,214,198);
+    border-radius: 8px;
+}
+
+.q40 h1 {
+    font-size: 20px;
+}
+
+.q40 p {
+    font-size: 15px;
+    color: rgb(107,114,128);
+}
+
+#q5 {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255); 
+    border: solid rgba(229, 231, 235) 1px;
+    border-radius: 15px;
+    height: 36vh;
+    padding: 20px;
+    box-shadow: 0px 3px 5px 0px rgb(216, 216, 216);
+    width: 65vw;
+    gap: 10px;
+}
+
+#pratosDestaq {
+    font-size: 20px;
+}
+
+#conjuntoImgQ5 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+#conjuntoImgQ5 img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+@media (max-width: 770px) {
+    .contaiter {
+        flex-direction: column;
+    }
+
+    .painelesquerdo {
+        display: none;
+    }
+
+    .paineldireito {
+        width: 100vw;
+        height: 160vh;
+    }
+
+    .conjunto1, .conjunto2, .conjunto3 {
+        width: 90vw;
+    }
+
+    .conjunto2 {
+        flex-direction: column;
+    }
+
+    #q3, #q4 {
+        width: 100%;
+    }
+
+    #q3, #q4, #q5 {
+        height: auto;
+    }
+
+    #q5 {
+        width: 100%;
+    }
+    
+    .botaoPainel {
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        gap: 10px;
+        height: 8vh;
+        border-radius: 30px;
+        margin: 0%;
+    }
+
+    .botaoPainel img {
+        width: 30px;
+        height: 30px;
+    }
+
+    #conjuntoImgQ5 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);    
+        
+    }
+
+    #conjuntoImgQ5 img{
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .painelbaixo {
+        display: flex;
+    }
+}

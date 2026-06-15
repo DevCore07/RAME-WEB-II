@@ -1,0 +1,223 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'aluno/inicio/css/style.css' %}">
+    <title>NutriSafe IFCE</title>
+</head>
+
+<body>
+    
+    <header>
+        <div class="header-left">
+
+            <div>
+                <img src="{% static 'aluno/inicio/img/q2/image.png' %}" width="50px" height="50px">
+            </div>
+
+            <div class="container-nome-projeto">
+                <div>
+                    <h1>RAME</h1>
+                </div>
+                <div>
+                    <p style="color: rgb(122,128,141);">Rede Alimentar de Monitoramento Estudantil</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="header-right">
+
+            <button class="bt-tema" id="btn-decoracao">
+                <img src="{% static 'aluno/inicio/img/header/moon-svgrepo-com.svg' %}" alt="">
+            </button>
+
+            <div class="menu-user">
+
+                <div class="user">
+                    <img src="{% static 'aluno/inicio/img/header/user-alt-1-svgrepo-com.svg' %}" alt="">
+                    <p>Aluno</p>
+                </div>
+
+                
+            </div>
+
+            <button class="bt-tema">
+                <img src="{% static 'aluno/inicio/img/header/icons8-logout-100.png' %}" alt="">
+            </button>
+
+        </div>
+    </header>
+    
+
+    <main>
+        <div class="contaiter">
+
+            <div class="painelesquerdo">
+
+                <a class="botaoPainel" id="btn-inicio" href="inicio.html">
+                    <img src="{% static 'aluno/inicio/img/painelEsquerdo/inicio/houseWhite.png' %}" alt="">
+                    <p>Início</p>
+                </a>
+
+                <a class="botaoPainel" href="../restrincoes/restrincoes.html">
+                    <img src="{% static 'aluno/inicio/img/painelEsquerdo/minhasRestricoes/alertBlack.png' %}" alt="">
+                    <p>Minhas restrições</p>
+                </a>
+
+                <a class="botaoPainel" href="../cardapio/cardapio.html">
+                    <img src="{% static 'aluno/inicio/img/painelEsquerdo/cardapioSemanal/calendarBlack.png' %}" alt="">
+                    <p>Cardápio semanal</p>
+                </a>
+
+            </div>
+
+            <div class="paineldireito">
+
+                <div class="conjunto1">
+
+                    <div id="q1">
+                        <h1>Olá, Estudante!</h1>
+                        <p>Aqui você pode visualizar e gerenciar suas restrições alimentares</p>
+                    </div>
+
+                    <div id="q2">
+                        <div class="q20">
+
+                            <div>
+                                <img src="{% static 'aluno/inicio/img/q2/image.png' %}" alt="">
+                            </div>
+
+                            <div>
+                                <h1>Suas Restrições Alimentares</h1>
+                                <p>Intolerância à Lactose.</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="conjunto2">
+
+                    <div id="q3">
+
+                        <div>
+
+                            <div class="q30">
+                                <img src="{% static 'aluno/inicio/img/q3/icon.png' %}"  alt="">
+                                <h1>Cardápio Hoje</h1>
+                            </div>
+
+                            <div>
+                                <p id="dia-semana">Segunda-feira</p>
+                            </div>
+
+                            <div class="q3030">
+
+                                <div class="q3031">
+                                    <img src="{% static 'aluno/inicio/img/q3/img1.png' %}" alt="">
+                                    <p>Arroz e Feijão</p>
+                                </div>
+
+                                <div class="q3031">
+                                    <img src="{% static 'aluno/inicio/img/q3/img2.png' %}" alt="">
+                                    <p>Frango Grelhado</p>
+                                </div>
+
+                                <div class="q3031">
+                                    <img src="{% static 'aluno/inicio/img/q3/img3.png' %}" alt="">
+                                    <p>Salada Verde</p>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div id="q4">
+
+                        <div class="q40">
+
+                            <div>
+                                <img src="{% static 'aluno/inicio/img/q4/img1.png' %}" alt="">
+                            </div>
+
+                            <div>
+                                <h1>Dica do Dia</h1>
+                                <p>
+                                    Sempre confira os alertas no cardápio antes de se servir.
+                                    Em caso de dúvidas, consulte a nutricionista responsável.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="conjunto3">
+
+                    <div id="q5">
+
+                        <div>
+                            <h1 id="pratosDestaq">Pratos em Destaque Esta Semana</h1>
+                        </div>
+
+                        <div id="conjuntoImgQ5">
+
+                            <div>
+                                <img src="{% static 'aluno/inicio/img/q3/img1.png' %}" alt="">
+                            </div>
+
+                            <div>
+                                <img src="{% static 'aluno/inicio/img/q3/img1.png' %}" alt="">
+                            </div>
+
+                            <div>
+                                <img src="{% static 'aluno/inicio/img/q3/img1.png' %}" alt="">
+                            </div>
+
+                            <div>
+                                <img src="{% static 'aluno/inicio/img/q3/img1.png' %}" alt="">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="painelbaixo">
+
+                <a class="botaoPainel" id="btn-inicio" href="inicio.html">
+                    <img src="{% static 'aluno/inicio/img/painelEsquerdo/inicio/houseWhite.png' %}" alt="">
+                    <p>Início</p>
+                </a>
+
+                <a class="botaoPainel" href="../restrincoes/restrincoes.html">
+                    <img src="{% static 'aluno/inicio/img/painelEsquerdo/minhasRestricoes/alertBlack.png' %}" alt="">
+                    <p>Minhas restrições</p>
+                </a>
+
+                <a class="botaoPainel" href="../cardapio/cardapio.html">
+                    <img src="{% static 'aluno/inicio/img/painelEsquerdo/cardapioSemanal/calendarBlack.png' %}" alt="">
+                    <p>Cardápio semanal</p>
+                </a>
+                
+            </div>
+
+        </div>
+    </main>
+
+</body>
+
+</html>
