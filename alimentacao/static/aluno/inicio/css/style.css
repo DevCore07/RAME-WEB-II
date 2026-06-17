@@ -26,7 +26,8 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 0 15px;
-    height: 100px;
+    height: 85px;
+    z-index: 1;
 }
 
 
@@ -43,14 +44,13 @@ header {
     gap: 10px;
 }
 
-.user {
-    display: flex;
-    gap: 15px;
-    
-}
 
-#btn-decoracao {
-    border-right: solid 0.5px;
+.menu-user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 15px;
+    border-left: solid 0.5px;
     border-color: rgb(242, 243, 245);
 }
 
@@ -74,9 +74,9 @@ header {
     width: 20px;
 }
 
-.menu-user {
+.user {
     border: none;
-    width: 100px;
+    width: 80px;
     height: 40px;
     display: flex;
     justify-content: center;
@@ -84,6 +84,7 @@ header {
     border-radius: 10px;
     background-color: rgb(232, 245, 233);
     color: rgb(127, 189, 151);
+    gap: 5px;
 }
 
 .user img {
@@ -92,7 +93,10 @@ header {
 
 .contaiter {
     display: flex;
-    padding-top: 100px;
+    padding-top: 85px;
+    border: solid;
+    max-height: 1200px;
+    height: 120vh;
 }
 
 .painelbaixo {
@@ -105,10 +109,16 @@ header {
 }
 
 .painelesquerdo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: rgb(255,255,255);
     border-right: 1px solid rgb(229,231,235);
     width: 250px;
     min-width: 250px;
+    height: auto;
+    padding: 10px 0 ;
+    gap: 5px;
 }
 
 .botaoPainel {
@@ -117,15 +127,15 @@ header {
     padding: 10px;
     gap: 20px;
     width: 90%;
-    height: 5vh;
-    border: 1px solid rgb(229,231,235);
+    height: 45px;
     border-radius: 15px;
-    margin: 5%;
+    transition: 0.3s ease;
 }
 
 .botaoPainel.ativo {
     background-color: #238b50;
     color: white;
+    width: 92%; 
 }
 
 .botaoPainel {
@@ -140,12 +150,12 @@ header {
 .botaoPainel:hover {
     background-color: rgb(183,214,198);
     color: #238b50;
-    scale: 1.05;
+    scale: 1.01;
 }
 
 .botaoPainel img {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
 }
 
 .paineldireito {
@@ -156,8 +166,7 @@ header {
     gap: 2%; 
     width: 90vw;
     min-width: 30vw;
-    margin-top: 30px;
-    padding: 5px;
+    padding: 20px 5px;
     /* gambiarra painel esquerdo encostar  na parte inferior */
     height: auto;
 }
@@ -219,7 +228,6 @@ header {
 .conjunto3 {
     min-width: 65vw;
     min-height: 20vh;
-    display: flex;
 }
 
 .conjunto2 {
@@ -289,6 +297,11 @@ header {
     border-radius: 20px;
     height: 80px;
     gap: 10px;
+    transition: 0.2s ease;
+}
+
+.q3031:hover {
+    background-color: rgba(230, 240, 235);
 }
 
 .q3031 img{
@@ -339,7 +352,7 @@ header {
     background-color: rgba(255, 255, 255); 
     border: solid rgba(229, 231, 235) 1px;
     border-radius: 15px;
-    height: 36vh;
+    height: auto;
     padding: 20px;
     box-shadow: 0px 3px 5px 0px rgb(216, 216, 216);
     width: 65vw;
