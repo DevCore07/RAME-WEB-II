@@ -16,7 +16,7 @@
         <div class="header-left">
 
             <div class="logo">
-                <img src="{% static 'aluno/inicio/img/header/foto_devcore_verde-removebg-preview.png' %}" width="50px" height="50px">
+                <img src="{% static 'aluno/inicio/img/tema_claro/header/foto_devcore_verde-removebg-preview.png' %}" width="50px" height="50px">
             </div>
 
             <div class="container-nome-projeto">
@@ -33,13 +33,13 @@
         <div class="header-right">
 
             <button class="btn_tema" id="btn-decoracao">
-                <img class="img_tema" src="{% static 'aluno/inicio/img/header/moon-svgrepo-com.svg' %}" alt="">
+                <img class="img_tema" src="{% static 'aluno/inicio/img/tema_claro/header/moon-svgrepo-com.svg' %}" alt="">
             </button>
 
             <div class="menu-user">
 
                 <div class="user">
-                    <img src="{% static 'aluno/inicio/img/header/user-alt-1-svgrepo-com.svg' %}" alt="">
+                    <img src="{% static 'aluno/inicio/img/tema_claro/header/user-alt-1-svgrepo-com.svg' %}" alt="">
                     <p>Aluno</p>
                 </div>
 
@@ -47,7 +47,7 @@
             </div>
 
             <a class="btn_sair" href="/">
-                <img src="{% static 'aluno/inicio/img/header/icons8-logout-100.png' %}" alt="">
+                <img class="img_sair" src="{% static 'aluno/inicio/img/tema_claro/header/logout-svgrepo-com.svg' %}" alt="">
             </a>
 
         </div>
@@ -59,18 +59,18 @@
 
             <div class="painelesquerdo">
 
-                <a class="botaoPainel ativo" href="inicio">
-                    <img src="{% static 'aluno/inicio/img/painelEsquerdo/inicio/houseWhite.png' %}" alt="">
+                <a class="botaoPainel ativo" href="inicio" id="inicio">
+                    <img class="img_casa" src="{% static 'aluno/inicio/img/tema_escuro/painelEsquerdo/inicio/houseWhite.png' %}" alt="">
                     <p>Início</p>
                 </a>
 
-                <a class="botaoPainel" href="../restrincoes/restrincoes.html">
-                    <img src="{% static 'aluno/inicio/img/painelEsquerdo/minhasRestricoes/alertBlack.png' %}" alt="">
+                <a class="botaoPainel" href="../restrincoes/restrincoes.html" id="restricoes">
+                    <img class="img_alerta" src="{% static 'aluno/inicio/img/tema_claro/painelEsquerdo/minhasRestricoes/alert-square-svgrepo-com.svg' %}" alt="">
                     <p>Minhas restrições</p>
                 </a>
 
-                <a class="botaoPainel" href="../cardapio/cardapio.html">
-                    <img src="{% static 'aluno/inicio/img/painelEsquerdo/cardapioSemanal/calendarBlack.png' %}" alt="">
+                <a class="botaoPainel" href="../cardapio/cardapio.html" id="cardapio">
+                    <img class="img_cardapio" src="{% static 'aluno/inicio/img/tema_claro/painelEsquerdo/cardapioSemanal/calendarBlack.png' %}" alt="">
                     <p>Cardápio semanal</p>
                 </a>
 
@@ -89,12 +89,14 @@
                         <div class="q20">
 
                             <div>
-                                <img src="{% static 'aluno/inicio/img/q2/image.png' %}" alt="">
+                                <img src="{% static 'aluno/inicio/img/tema_claro/q2/image.png' %}" alt="">
                             </div>
 
-                            <div>
+                            <div class="restricoes">
                                 <h1>Suas Restrições Alimentares</h1>
-                                <p>Intolerância à Lactose.</p>
+                                <ul>
+                                    <li>Intolerância à Lactose.</li>
+                                </ul>
                             </div>
 
                         </div>
@@ -109,7 +111,7 @@
                         <div>
 
                             <div class="q30">
-                                <img src="{% static 'aluno/inicio/img/q3/icon.png' %}"  alt="">
+                                <img src="{% static 'aluno/inicio/img/tema_claro/q3/icon.png' %}"  alt="">
                                 <h1>Cardápio Hoje</h1>
                             </div>
 
@@ -120,17 +122,17 @@
                             <div class="q3030">
 
                                 <div class="q3031">
-                                    <img src="{% static 'aluno/inicio/img/q3/img1.png' %}" alt="">
+                                    <img src="{% static 'aluno/inicio/img/tema_claro/q3/img1.png' %}" alt="">
                                     <p>Arroz e Feijão</p>
                                 </div>
 
                                 <div class="q3031">
-                                    <img src="{% static 'aluno/inicio/img/q3/img2.png' %}" alt="">
+                                    <img src="{% static 'aluno/inicio/img/tema_claro/q3/img2.png' %}" alt="">
                                     <p>Frango Grelhado</p>
                                 </div>
 
                                 <div class="q3031">
-                                    <img src="{% static 'aluno/inicio/img/q3/img3.png' %}" alt="">
+                                    <img src="{% static 'aluno/inicio/img/tema_claro/q3/img3.png' %}" alt="">
                                     <p>Salada Verde</p>
                                 </div>
 
@@ -145,7 +147,7 @@
                         <div class="q40">
 
                             <div>
-                                <img src="{% static 'aluno/inicio/img/q4/img1.png' %}" alt="">
+                                <img src="{% static 'aluno/inicio/img/tema_claro/q4/img1.png' %}" alt="">
                             </div>
 
                             <div>
@@ -174,25 +176,25 @@
 
                             <div>
                                 <p>comida</p>
-                                <img src="{% static 'aluno/inicio/img/q3/img1.png' %}" alt="">
+                                <img src="{% static 'aluno/inicio/img/tema_claro/q3/img1.png' %}" alt="">
                             </div>
 
                             <div>
                                 <p>comida</p>
 
-                                <img src="{% static 'aluno/inicio/img/q3/img1.png' %}" alt="">
+                                <img src="{% static 'aluno/inicio/img/tema_claro/q3/img1.png' %}" alt="">
                             </div>
 
                             <div>
                                 <p>comida</p>
 
-                                <img src="{% static 'aluno/inicio/img/q3/img1.png' %}" alt="">
+                                <img src="{% static 'aluno/inicio/img/tema_claro/q3/img1.png' %}" alt="">
                             </div>
 
                             <div>
                                 <p>comida</p>
 
-                                <img src="{% static 'aluno/inicio/img/q3/img1.png' %}" alt="">
+                                <img src="{% static 'aluno/inicio/img/tema_claro/q3/img1.png' %}" alt="">
                             </div>
 
                         </div>
@@ -206,17 +208,17 @@
             <div class="painelbaixo">
 
                 <a class="botaoPainel ativo" id="btn-inicio" href="inicio.html">
-                    <img src="{% static 'aluno/inicio/img/painelEsquerdo/inicio/houseWhite.png' %}" alt="">
+                    <img src="{% static 'aluno/inicio/img/tema_claro/painelEsquerdo/inicio/houseWhite.png' %}" alt="">
                     <p>Início</p>
                 </a>
 
                 <a class="botaoPainel" href="../restrincoes/restrincoes.html">
-                    <img src="{% static 'aluno/inicio/img/painelEsquerdo/minhasRestricoes/alertBlack.png' %}" alt="">
+                    <img src="{% static 'aluno/inicio/img/tema_claro/painelEsquerdo/minhasRestricoes/alertBlack.png' %}" alt="">
                     <p>Minhas restrições</p>
                 </a>
 
                 <a class="botaoPainel" href="../cardapio/cardapio.html">
-                    <img src="{% static 'aluno/inicio/img/painelEsquerdo/cardapioSemanal/calendarBlack.png' %}" alt="">
+                    <img src="{% static 'aluno/inicio/img/tema_claro/painelEsquerdo/cardapioSemanal/calendarBlack.png' %}" alt="">
                     <p>Cardápio semanal</p>
                 </a>
                 
