@@ -211,15 +211,29 @@
                     </div>
                 </div>
             </section>
+
+            <div class="painelbaixo">
+
+               <a class="botaoPainel" href="inicio" id="inicio">
+                    <img class="img_casa" src="{% static 'aluno/inicio/img/tema_escuro/painelEsquerdo/inicio/houseWhite.png' %}" alt="">
+                    <p>Início</p>
+                </a>
+
+                <a class="botaoPainel" href="restricoes" id="restricoes">
+                    <img class="img_alerta" src="{% static 'aluno/inicio/img/tema_claro/painelEsquerdo/minhasRestricoes/alert-square-svgrepo-com.svg' %}" alt="">
+                    <p>Minhas restrições</p>
+                </a>
+
+                <a class="botaoPainel ativo" href="cardapio" id="cardapio">
+                    <img class="img_cardapio" src="{% static 'aluno/inicio/img/tema_claro/painelEsquerdo/cardapioSemanal/calendarBlack.png' %}" alt="">
+                    <p>Cardápio semanal</p>
+                </a>
+                
+            </div>
         </div>
     </main>
 
-    <script>
-        const btnTema = document.getElementById('btn-tema');
-        btnTema.addEventListener('click', () => {
-            document.body.classList.toggle('dark-theme');
-        });
-    </script>
+    <script src="{% static 'js_tema/script.js' %}"></script>
 </body>
 
 </html>

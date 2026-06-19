@@ -143,9 +143,19 @@ main {
 
 .container {
     display: flex;
-    width: 100%;
+    /* flex-direction: column;
+    width: 100%; */
 }
 
+
+.painelbaixo {
+    display: none;
+    padding: 5px 10px;
+    background-color: var(--bg-color);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
 
 .painelbaixo .botaoPainel.ativo:hover {
     background-color: #238b50;
@@ -250,37 +260,36 @@ main {
     flex-direction: column;
     align-items: center;
     flex: 1;
-    background-color: rgb(248, 249, 250); /* rgb(15, 20, 25) */
     gap: 20px;
-    padding: 20px;
-    margin-top: 30px;
+    padding: 20px 5px;
+
 }
 
 .titulo-cardapio, .dia {
     width: 65vw;
     min-width: 65vw;
-    background: white;
-    border: 1px solid #e5e7eb;
+    background: var(--bg-color-second);
+    border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 18px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, .05);
 }
 
 .titulo-cardapio {
-    border: 1px solid #238b50;
+    border: 1px solid var(--border-color);
 }
 
 .titulo-cardapio h2 {
-    color: rgb(0, 0, 0); /* rgb(255, 255, 255) */
+    color: var(--text-color)
 }
 
 .titulo-cardapio p {
-    color: #666;
+    color: rgb(170, 176, 180);
     margin-top: 5px;
 }
 
 .dia h3 {
-    color: #238b50;
+    color: var(--text-color);
     margin-bottom: 15px;
 }
 
@@ -297,7 +306,7 @@ main {
     min-height: 220px;
     border-radius: 12px;
     overflow: hidden;
-    background-color: rgba(237, 243, 242); /* rgb(15, 36, 35) */
+    background-color: var(--bg-color);
     border: solid rgba(192, 218, 205) 1px; /* rgb(15, 45, 41) */
     transition: .3s;
     cursor: pointer;
@@ -317,7 +326,7 @@ main {
 
 .card h4 {
     padding: 12px 12px 6px;
-    color: rgb(0, 0, 0); /* rgb(255, 255, 255) */
+    color: var(--text-color)
 }
 
 .card p {
@@ -365,6 +374,12 @@ main {
 }
 
 @media (max-width: 900px) {
+
+    .contaiter {
+        display: flex;
+        border: solid;
+    }
+    
     .painelesquerdo {
         display: none;
     }
@@ -376,5 +391,25 @@ main {
 
     .card {
         width: 100%;
+    }
+
+    .nome_projeto{
+        display: none;
+    }
+
+    .painelbaixo {
+        display: flex;
+        gap: 5px;
+        border: 1px solid var(--border-color);
+    }
+
+    .botaoPainel {
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        gap: 10px;
+        height: auto;
+        border-radius: 15px;
+        margin: 0%;
     }
 }
