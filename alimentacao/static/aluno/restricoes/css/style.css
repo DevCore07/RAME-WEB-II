@@ -137,7 +137,7 @@ main {
     /* justify-content: center; */
     /* align-items: center; */
     padding-top: 85px;
-    /* max-height: 1200px; */
+    max-height: 1200px;
 }
 
 .contaiter {
@@ -175,7 +175,7 @@ main {
     border-right: 1px solid var(--border-color);
     width: 250px;
     min-width: 250px;
-    /* height: 125vh; */
+    height: 125vh;
     padding: 10px 0 ;
     gap: 5px;
 }
@@ -228,250 +228,69 @@ main {
     height: auto;
 }
 
-
-.conjunto1 {
+.container-conjunto1 {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 65vw;
-    min-width: 30vw;
-
+    min-width: 65vw;
 }
 
-#q1 {
-    background-color: var(--bg-color-second);
-    border: solid var(--border-color) 1px;
+#conteudo-q1 {
+    background-color: var(--bg-color-second); /* rgb(15, 36, 35) */
+    border: solid var(--border-color) 1px; /* rgb(15, 45, 41) */
     border-radius: 15px;
     height: 110%;
     padding: 16px;
 }
 
-#q1 p{
-    color: rgba(107, 114, 128);
+
+#conteudo-q1 p {
+    color: rgb(170, 176, 180); /* rgb(170, 176, 180) -- permanece a mesma cor */
 }
 
-#q2 {
-    background-color: var(--bg-color);
-    border: solid var(--border-color) 1px;
-    border-radius: 15px;
-    height: 100%;
-    box-shadow: 0px 3px 5px 0px var(--shadow-color);
-    transition: 0.2s ease;
-}
-
-#q2:hover {
-    box-shadow: 0px 7px 7px 0.4px var(--shadow-color);
-}
-
-.q20 img {
-
-    width: 50px;
-    height: 50px;
-    background-color: var(--bg-color-second);
-    border-radius: 10px;
-    padding: 10px;
-}
-
-.q20 {
+.container-conjunto2 {
     display: flex;
+    flex-direction: column;
     gap: 20px;
-    padding: 20px;
-}
-
-.q20 h1 {
-    font-size: 20px;
-    font-weight: 600;
-}
-
-ul {
-    left: 10px;
-}
-.conjunto3 {
     min-width: 65vw;
-    min-height: 20vh;
-}
-
-.conjunto2 {
-    display: flex;
-    gap: 10px; 
-    width: 65vw;
-    justify-content: center;
-}
-
-#q3 {
-    background-color: var(--bg-color);
-    border: solid var(--border-color) 1px;
+    background-color: var(--bg-color); /* rgb(26, 31, 38) */
+    border: solid var(--border-color) 1px;  /* rgb(34, 42, 52) */
     border-radius: 15px;
-    width: 50%;
-    min-height: 43vh;
-    box-shadow: 0px 3px 5px 0px var(--shadow-color);
-    transition: 0.2s ease;
 }
 
-
-#q3:hover {
-    box-shadow: 0px 7px 7px 0.4px var(--shadow-color);
+#conteudo-q2 {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
 }
 
-#dia-semana {
-    color: rgb(119, 122, 128);
-    margin-left: 20px;
-}
-
-.q30 img {
-    width: 45px;
-    height: 45px;
-    background-color: var(--bg-color-second);
-    border-radius: 10px;
+.check-container {
+    display: flex;
+    border: solid var(--border-color) 1px;  /* rgb(41, 48, 60) */
     padding: 10px;
-}
-
-.q30 {
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    gap: 20px;
-}
-
-.q30 h1 {
-    font-size: 20px;
-    font-weight: 600;
-}
-
-.q3030 {
-    display: flex;
-    flex-direction: column;
-    padding: 15px;
-    gap: 10px;
-}
-
-
-.q3030 img {
-    width: 70px;
-    height: 70px;
-    border-radius: 20px;
-}
-
-.q3031 {
-    background-color: var(--bg-color-primary);
-    display: flex;
-    align-items: center;
-    border-radius: 20px;
-    height: 80px;
-    gap: 10px;
-    transition: 0.2s ease;
-}
-
-.q3031:hover {
-    background-color: var(--bg-color-second);
-}
-
-.q3031 img{
-    width: 70px;
-    height: 70px;
-    padding: 5px;
-}
-
-#q4 {
-    background-color: var(--bg-color-second);
-    border: solid var(--border-color) 1px;
-    border-radius: 15px;
-    width: 50%;
-    /* min-height: 42vh; */
-    box-shadow: 0px 3px 5px 0px var(--shadow-color);
-    transition: 0.2s ease;
-}
-
-#q4:hover {
-    box-shadow: 0px 7px 7px 0.4px var(--shadow-color);
-}
-
-.q40 {
-    display: flex;
-    padding: 20px;
-    gap: 20px;
-}
-
-.q40 img {
-    width: 50px;
-    height: 50px;
-    background-color: var(--bg-color-second);
-    border-radius: 8px;
-}
-
-.q40 h1 {
-    font-size: 20px;
-}
-
-.q40 p {
-    font-size: 15px;
-    color: rgb(107,114,128);
-}
-
-#q5 {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--bg-color); 
-    border: solid var(--border-color) 1px;
-    border-radius: 15px;
-    height: auto;
-    padding: 20px;
-    box-shadow: 0px 3px 5px 0px var(--shadow-color);
-    width: 65vw;
-    gap: 10px;
-}
-
-#pratosDestaq {
-    font-size: 20px;
-}
-
-#conjuntoImgQ5 {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-}
-
-#conjuntoImgQ5 div {
     border-radius: 10px;
-    overflow: hidden;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-    position: relative;
-
+    gap: 10px;
 }
 
-#conjuntoImgQ5 div p{
-    position:absolute;
-    display: none;
-    z-index: 1;
+.check-container p {
+    color: var(--text-color);  /* rgb(255, 255, 255) */
+}
+
+.btn-salvar {
     color: white;
-    left: 10px;
-    top: 10px;
+    background-color: #238b50; 
+    padding: 10px;
+    border: solid 0px;
+    border-radius: 10px;
+    font-size: 8px;
 }
 
-#conjuntoImgQ5 img {
-    width: 100%;
-    top: 0;
-    bottom: 0;
-    transition: 0.2s ease;
-    position:absolute;
+.painelbaixo {
+    display: none;
 }
 
-
-
-#conjuntoImgQ5 img:hover {
-    scale: 1.1;
-    background-image: #000000;
-}
-
-#conjuntoImgQ5 div:hover p{
-    display: flex;
-}
-
-
-
-
-@media (max-width: 770px) {
+@media (max-width: 800px) {
     .contaiter {
         flex-direction: column;
     }
@@ -486,29 +305,19 @@ ul {
 
     .paineldireito {
         width: 100vw;
-        /* height: 160vh; */
+        height: 160vh;
     }
-
-    .conjunto1, .conjunto2, .conjunto3 {
+    
+    .container-conjunto1, .container-conjunto2 {
         width: 90vw;
     }
 
-    .conjunto2 {
-        flex-direction: column;
+    .painelbaixo {
+        display: flex;
+        gap: 5px;
+        border: 1px solid var(--border-color);
     }
 
-    #q3, #q4 {
-        width: 100%;
-    }
-
-    #q3, #q4, #q5 {
-        height: auto;
-    }
-
-    #q5 {
-        width: 100%;
-    }
-    
     .botaoPainel {
         display: flex;
         flex-direction: column;
@@ -518,30 +327,4 @@ ul {
         border-radius: 15px;
         margin: 0%;
     }
-
-
-    #conjuntoImgQ5 {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);    
-        
-    }
-
-    #conjuntoImgQ5 img{
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-    }
-
-    .painelbaixo {
-        display: flex;
-        gap: 5px;
-        border: 1px solid var(--border-color);
-    }
-
-    .contaiter {
-        height: 1500px;
-        /* max-height: 1500px; */
-    }
-    
 }
-

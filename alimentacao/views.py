@@ -23,3 +23,10 @@ def login(request):
 
 def inicio(request):
     return render(request, 'aluno/inicio/inicio.html')
+
+def restricoes(request):
+    return render(request, 'aluno/restricoes/restricoes.html')
+
+
+def cardapio(request): 
+    return render(request, 'aluno/cardapio/cardapio.html')

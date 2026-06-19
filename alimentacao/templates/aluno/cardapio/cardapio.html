@@ -1,0 +1,225 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio Semanal - RAME</title>
+    <link rel="stylesheet" href="{% static 'aluno/cardapio/css/style.css' %}">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="header-left">
+
+            <div class="logo">
+                <img src="{% static 'aluno/inicio/img/tema_claro/header/foto_devcore_verde-removebg-preview.png' %}" width="50px" height="50px">
+            </div>
+
+            <div class="container-nome-projeto">
+                <div>
+                    <h1>RAME</h1>
+                </div>
+                <div>
+                    <p class="nome_projeto" style="color: rgb(122,128,141);">Rede Alimentar de Monitoramento Estudantil</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="header-right">
+
+            <button class="btn_tema" id="btn-decoracao">
+                <img class="img_tema" src="{% static 'aluno/inicio/img/tema_claro/header/moon-svgrepo-com.svg' %}" alt="">
+            </button>
+
+            <div class="menu-user">
+
+                <div class="user">
+                    <img src="{% static 'aluno/inicio/img/tema_claro/header/user-alt-1-svgrepo-com.svg' %}" alt="">
+                    <p>Aluno</p>
+                </div>
+
+                
+            </div>
+
+            <a class="btn_sair" href="/">
+                <img class="img_sair" src="{% static 'aluno/inicio/img/tema_claro/header/logout-svgrepo-com.svg' %}" alt="">
+            </a>
+
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="painelesquerdo">
+
+                <a class="botaoPainel" href="inicio" id="inicio">
+                    <img class="img_casa" src="{% static 'aluno/inicio/img/tema_claro/painelEsquerdo/inicio/houseBlack.png' %}" alt="">
+                    <p>Início</p>
+                </a>
+
+                <a class="botaoPainel" href="restricoes" id="restricoes">
+                    <img class="img_alerta" src="{% static 'aluno/inicio/img/tema_claro/painelEsquerdo/minhasRestricoes/alert-square-svgrepo-com.svg' %}" alt="">
+                    <p>Minhas restrições</p>
+                </a>
+
+                <a class="botaoPainel ativo" href="cardapio" id="cardapio">
+                    <img class="img_cardapio" src="{% static 'aluno/inicio/img/tema_escuro/painelEsquerdo/cardapioSemanal/calendarWhite.png' %}" alt="">
+                    <p>Cardápio semanal</p>
+                </a>
+
+            </div>
+
+            <section class="paineldireito">
+                <div class="titulo-cardapio">
+                    <h2>📋 Cardápio Semanal</h2>
+                    <p>Confira as refeições disponíveis para você.</p>
+                </div>
+
+                <div class="dia">
+                    <h3>📅 Segunda-feira</h3>
+                    <div class="cards">
+                        <div class="card disponivel">
+                            <div class="status status-ok">✓</div>
+                            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd" alt="Arroz e Feijão">
+                            <h4>Arroz e Feijão</h4>
+                            <p>Disponível para você</p>
+                        </div>
+
+                        <div class="card disponivel">
+                            <div class="status status-ok">✓</div>
+                            <img src="https://images.unsplash.com/photo-1546793665-c74683f339c1" alt="Salada Verde">
+                            <h4>Salada Verde</h4>
+                            <p>Disponível para você</p>
+                        </div>
+
+                        <div class="card restrito">
+                            <div class="status status-erro">!</div>
+                            <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb" alt="Pudim de Leite">
+                            <h4>Pudim de Leite</h4>
+                            <p>Contém lactose</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dia">
+                    <h3>📅 Terça-feira</h3>
+                    <div class="cards">
+                        <div class="card disponivel">
+                            <div class="status status-ok">✓</div>
+                            <img src="https://images.unsplash.com/photo-1532550907401-a500c9a57435" alt="Frango Assado">
+                            <h4>Frango Assado</h4>
+                            <p>Disponível para você</p>
+                        </div>
+
+                        <div class="card disponivel">
+                            <div class="status status-ok">✓</div>
+                            <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19" alt="Arroz Integral">
+                            <h4>Arroz Integral</h4>
+                            <p>Disponível para você</p>
+                        </div>
+
+                        <div class="card disponivel">
+                            <div class="status status-ok">✓</div>
+                            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" alt="Salada Tropical">
+                            <h4>Salada Tropical</h4>
+                            <p>Disponível para você</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dia">
+                    <h3>📅 Quarta-feira</h3>
+                    <div class="cards">
+                        <div class="card restrito">
+                            <div class="status status-erro">!</div>
+                            <img src="https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb" alt="Macarrão">
+                            <h4>Macarrão ao Molho</h4>
+                            <p>Contém glúten</p>
+                        </div>
+
+                        <div class="card disponivel">
+                            <div class="status status-ok">✓</div>
+                            <img src="https://images.unsplash.com/photo-1529042410759-befb1204b468" alt="Almôndegas">
+                            <h4>Almôndegas</h4>
+                            <p>Disponível para você</p>
+                        </div>
+
+                        <div class="card disponivel">
+                            <div class="status status-ok">✓</div>
+                            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd" alt="Legumes">
+                            <h4>Legumes Refogados</h4>
+                            <p>Disponível para você</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dia">
+                    <h3>📅 Quinta-feira</h3>
+                    <div class="cards">
+                        <div class="card disponivel">
+                            <div class="status status-ok">✓</div>
+                            <img src="https://images.unsplash.com/photo-1544025162-d76694265947" alt="Carne Assada">
+                            <h4>Carne Assada</h4>
+                            <p>Disponível para você</p>
+                        </div>
+
+                        <div class="card disponivel">
+                            <div class="status status-ok">✓</div>
+                            <img src="https://images.unsplash.com/photo-1608500218890-c4c6f8a9cbd3" alt="Purê">
+                            <h4>Purê de Batata</h4>
+                            <p>Disponível para você</p>
+                        </div>
+
+                        <div class="card disponivel">
+                            <div class="status status-ok">✓</div>
+                            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c" alt="Salada Caesar">
+                            <h4>Salada Caesar</h4>
+                            <p>Disponível para você</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dia">
+                    <h3>📅 Sexta-feira</h3>
+                    <div class="cards">
+                        <div class="card disponivel">
+                            <div class="status status-ok">✓</div>
+                            <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2" alt="Peixe">
+                            <h4>Peixe Grelhado</h4>
+                            <p>Disponível para você</p>
+                        </div>
+
+                        <div class="card restrito">
+                            <div class="status status-erro">!</div>
+                            <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9" alt="Espaguete">
+                            <h4>Espaguete</h4>
+                            <p>Contém glúten</p>
+                        </div>
+
+                        <div class="card disponivel">
+                            <div class="status status-ok">✓</div>
+                            <img src="https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea" alt="Salada de Frutas">
+                            <h4>Salada de Frutas</h4>
+                            <p>Disponível para você</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        const btnTema = document.getElementById('btn-tema');
+        btnTema.addEventListener('click', () => {
+            document.body.classList.toggle('dark-theme');
+        });
+    </script>
+</body>
+
+</html>

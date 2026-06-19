@@ -1,0 +1,130 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="styleRestrincoes.css"> -->
+    <link rel="stylesheet" href="{% static 'aluno/restricoes/css/style.css' %}">
+</head>
+<body>
+    
+    <header>
+        <div class="header-left">
+
+            <div class="logo">
+                <img src="{% static 'aluno/inicio/img/tema_claro/header/foto_devcore_verde-removebg-preview.png' %}" width="50px" height="50px">
+            </div>
+
+            <div class="container-nome-projeto">
+                <div>
+                    <h1>RAME</h1>
+                </div>
+                <div>
+                    <p class="nome_projeto" style="color: rgb(122,128,141);">Rede Alimentar de Monitoramento Estudantil</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="header-right">
+            <button class="btn_tema" id="btn-decoracao">
+                <img class="img_tema" src="{% static 'aluno/inicio/img/tema_claro/header/moon-svgrepo-com.svg' %}" alt="">
+            </button>
+
+            <div class="menu-user">
+
+                <div class="user">
+                    <img src="{% static 'aluno/inicio/img/tema_claro/header/user-alt-1-svgrepo-com.svg' %}" alt="">
+                    <p>Aluno</p>
+                </div>
+
+                
+            </div>
+
+            <a class="btn_sair" href="/">
+                <img class="img_sair" src="{% static 'aluno/inicio/img/tema_claro/header/logout-svgrepo-com.svg' %}" alt="">
+            </a>
+        </div>
+    </header>
+
+    <main>
+        
+        <div class="contaiter">
+
+            <div class="painelesquerdo">
+
+                <a class="botaoPainel" href="inicio" id="inicio">
+                    <img class="img_casa" src="{% static 'aluno/inicio/img/tema_claro/painelEsquerdo/inicio/houseBlack.png' %}" alt="">
+                    <p>Início</p>
+                </a>
+
+                <a class="botaoPainel ativo" href="restricoes" id="restricoes">
+                    <img class="img_alerta" src="{% static 'aluno/inicio/img/tema_escuro/painelEsquerdo/minhasRestricoes/alert-square-svgrepo-com.svg' %}" alt="">
+                    <p>Minhas restrições</p>
+                </a>
+
+                <a class="botaoPainel" href="cardapio" id="cardapio">
+                    <img class="img_cardapio" src="{% static 'aluno/inicio/img/tema_claro/painelEsquerdo/cardapioSemanal/calendarBlack.png' %}" alt="">
+                    <p>Cardápio semanal</p>
+                </a>
+
+            </div>
+
+            <div class="paineldireito">
+
+                <div class="container-conjunto1">
+
+                    <div id="conteudo-q1">
+                        <h1>Minhas Restrições</h1>
+                        <p>Marque suas restrições alimentares para receber alertas personalizados</p>
+                    </div>
+
+                </div>
+
+                <div class="container-conjunto2">
+
+                    <div id="conteudo-q2">
+                        <div class="check-container"><input type="checkbox"> <p>Intolerância à Lactose</p></div>
+                        <div class="check-container"><input type="checkbox"> <p>Intolerância ao Glúten (Celíaco) </p></div>
+                        <div class="check-container"><input type="checkbox"> <p>Alergias à castanhas/amemdoim</p></div>
+                        <div class="check-container"><input type="checkbox"> <p>Alergias à frutos do mar</p></div>
+                        <div class="check-container"><input type="checkbox"> <p>Alergia à Ovos</p></div>
+                        <div class="check-container"><input type="checkbox"> <p>Alergia à sojja</p></div>
+                        
+                        <button class="btn-salvar"><h1>Salvar Alterações</h1></button>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="painelbaixo">
+
+               <a class="botaoPainel ativo" href="inicio" id="inicio">
+                    <img class="img_casa" src="{% static 'aluno/inicio/img/tema_escuro/painelEsquerdo/inicio/houseWhite.png' %}" alt="">
+                    <p>Início</p>
+                </a>
+
+                <a class="botaoPainel" href="restricoes" id="restricoes">
+                    <img class="img_alerta" src="{% static 'aluno/inicio/img/tema_claro/painelEsquerdo/minhasRestricoes/alert-square-svgrepo-com.svg' %}" alt="">
+                    <p>Minhas restrições</p>
+                </a>
+
+                <a class="botaoPainel" href="../cardapio/cardapio.html" id="cardapio">
+                    <img class="img_cardapio" src="{% static 'aluno/inicio/img/tema_claro/painelEsquerdo/cardapioSemanal/calendarBlack.png' %}" alt="">
+                    <p>Cardápio semanal</p>
+                </a>
+                
+            </div>
+
+        </div>
+
+        
+    </main>
+    <script src="{% static 'aluno/inicio/js/script.js' %}"></script>
+    
+</body>
+</html>

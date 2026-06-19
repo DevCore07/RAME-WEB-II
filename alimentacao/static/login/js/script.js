@@ -15,3 +15,4 @@ btn_modo.addEventListener('click', () => {
         main.classList.remove('mainEscuro')
     }
 })
+
