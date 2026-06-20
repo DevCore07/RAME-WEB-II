@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAME - Gerenciar Cardápio Semanal</title>
+    <link rel="stylesheet" href="StyleCardapioNutri.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    
+    <div class="site">
+        <input type="radio" name="dia" id="seg" class="aba-radio">
+        <input type="radio" name="dia" id="ter" class="aba-radio">
+        <input type="radio" name="dia" id="qua" class="aba-radio">
+        <input type="radio" name="dia" id="qui" class="aba-radio" checked>
+        <input type="radio" name="dia" id="sex" class="aba-radio">
+
+        <aside class="lateral">
+            <div class="logo">
+                <div class="logo-ico">R</div>
+                <div class="logo-txt">
+                    <h1>RAME</h1>
+                    <p>Rede Alimentar de Monitoramento Estudantil</p>
+                </div>
+            </div>
+            
+            <nav class="nav">
+                <a href="#" class="link"><i class="fa-solid fa-house"></i> Início</a>
+                <a href="#" class="link"><i class="fa-solid fa-users"></i> Alunos</a>
+                <a href="#" class="link ativo"><i class="fa-solid fa-utensils"></i> Gerenciar Cardápio</a>
+            </nav>
+        </aside>
+
+        <main class="conteudo">
+            <header class="topo">
+                <div class="topo-usuario">
+                    <button class="btn-icone"><i class="fa-regular fa-moon"></i></button>
+                    <div class="perfil">
+                        <i class="fa-solid fa-user-circle"></i>
+                        <span>Nutricionista</span>
+                    </div>
+                    <button class="btn-icone"><i class="fa-solid fa-right-from-bracket"></i></button>
+                </div>
+            </header>
+
+            <section class="painel">
+                <div class="bloco-aviso">
+                    <h2>Gerenciar Cardápio Semanal</h2>
+                    <p>Cadastre e edite o cardápio, com alertas automáticos de restrições</p>
+                </div>
+
+                <div class="abas-semana">
+                    <label class="txt-pequeno">Selecione o dia da semana</label>
+                    <div class="botoes-dias">
+                        <label for="seg" class="btn-dia b-seg">Segunda</label>
+                        <label for="ter" class="btn-dia b-ter">Terça</label>
+                        <label for="qua" class="btn-dia b-qua">Quarta</label>
+                        <label for="qui" class="btn-dia b-qui">Quinta</label>
+                        <label for="sex" class="btn-dia b-sex">Sexta</label>
+                    </div>
+                </div>
+
+                <div class="titulo-sessao">
+                    <h3 class="titulo-dia t-seg">Itens do Cardápio - Segunda-feira</h3>
+                    <h3 class="titulo-dia t-ter">Itens do Cardápio - Terça-feira</h3>
+                    <h3 class="titulo-dia t-qua">Itens do Cardápio - Quarta-feira</h3>
+                    <h3 class="titulo-dia t-qui">Itens do Cardápio - Quinta-feira</h3>
+                    <h3 class="titulo-dia t-sex">Itens do Cardápio - Sexta-feira</h3>
+                    
+                    <button class="btn-add"><i class="fa-solid fa-plus"></i> Adicionar Item</button>
+                </div>
+
+                <div class="lista-alimentos">
+                    <div class="card">
+                        <img src="imagens/Arroz e feijão.jpg" alt="Arroz e Feijão" class="card-img">
+                        <div class="card-txt"><h4>Arroz e Feijão</h4><span class="tag-ok">Sem alérgenos</span></div>
+                    </div>
+                    <div class="card">
+                        <img src="imagens/Frango Grelhado.jpg" alt="Frango Grelhado" class="card-img">
+                        <div class="card-txt"><h4>Frango Grelhado</h4><span class="tag-ok">Sem alérgenos</span></div>
+                    </div>
+                    <div class="card">
+                        <img src="imagens/Salada Verde.jpg" alt="Salada Verde" class="card-img">
+                        <div class="card-txt"><h4>Salada Verde</h4><span class="tag-ok">Sem alérgenos</span></div>
+                    </div>
+                    <div class="card card-alerta">
+                        <div class="card-cima">
+                            <img src="imagens/Pudim de Leite.jpg" alt="Pudim de Leite" class="card-img">
+                            <div class="card-txt"><h4>Pudim de Leite</h4><span class="tag-ruim lactose">Lactose</span></div>
+                        </div>
+                        <div class="barra-alerta"><i class="fa-solid fa-triangle-exclamation"></i> <span>2 alunos afetados</span></div>
+                    </div>
+                    <div class="card card-alerta">
+                        <div class="card-cima">
+                            <img src="imagens/Macarrão ao Molho.jpg" alt="Macarrão ao Molho" class="card-img">
+                            <div class="card-txt"><h4>Macarrão ao Molho</h4><span class="tag-ruim gluten">Glúten</span></div>
+                        </div>
+                        <div class="barra-alerta"><i class="fa-solid fa-triangle-exclamation"></i> <span>1 aluno afetado</span></div>
+                    </div>
+                    <div class="card">
+                        <img src="imagens/Almôndegas.jpg" alt="Almôndegas" class="card-img">
+                        <div class="card-txt"><h4>Almôndegas</h4><span class="tag-ok">Sem alérgenos</span></div>
+                    </div>
+                </div>
+
+                <button class="btn-salvar"><i class="fa-regular fa-floppy-disk"></i> Salvar Cardápio</button>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>

@@ -19,6 +19,8 @@ def login(request):
         if user is not None:
             auth_login(request, user)
             return redirect('inicio')
+        else:
+            return redirect('inicio_nutricionista')
     return render(request, 'login/login.html')
 
 def inicio(request):
@@ -30,3 +32,6 @@ def restricoes(request):
 
 def cardapio(request): 
     return render(request, 'aluno/cardapio/cardapio.html')
+
+def inicio_nutricionista(request):
+    return render(request, 'nutricionista/inicio/inicioNutricionista.html')
