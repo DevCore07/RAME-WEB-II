@@ -35,3 +35,6 @@ def cardapio(request):
 
 def inicio_nutricionista(request):
     return render(request, 'nutricionista/inicio/inicioNutricionista.html')
+
+def alunos_nutricionista(request):
+    return render(request, 'nutricionista/alunos/alunos.html')

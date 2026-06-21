@@ -6,8 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'nutricionista/inicio/css/style.css' %}">
-
+    <link rel="stylesheet" href="{% static 'nutricionista/alunos/css/style.css' %}">
     <title>NutriSafe IFCE</title>
 </head>
 
@@ -59,12 +58,12 @@
 
             <div class="painelesquerdo">
 
-                <a class="botaoPainel ativo" href="inicio_nutricionista" id="inicio">
+                <a class="botaoPainel" href="inicio_nutricionista" id="inicio">
                     <img class="img_casa" src="{% static 'nutricionista/inicio/img/tema-escuro/painel-esquerdo/houseWhite.png' %}" alt="">
                     <p>Início</p>
                 </a>
 
-                <a class="botaoPainel" href="alunos_nutricionista" id="restricoes">
+                <a class="botaoPainel ativo" href="alunos_nutricionista" id="restricoes">
                     <img class="img_alerta people" src="{% static 'nutricionista/inicio/img/tema-claro/painel-esquerdo/people.png' %}" alt="">
                     <p>Alunos</p>
                 </a>
@@ -78,72 +77,47 @@
 
             <div class="paineldireito">
 
-                <div class="conjunto1">          
-                    <h1>Painel de Controle</h1>
-                    <p>Visão geral do sistema de gestão alimentar RAME</p>
-                </div>
+                <div class="conjunto1">
 
-                <div class="conjunto2">
-                    <div class="minicontainer-conjunto2">
-                        <div id="ajuste"><p>Total de Alunos</p><img src="{% static 'nutricionista/inicio/img/tema-claro/painel-direito/lupa.png' %}" alt=""></div>
-                        <div>
-                            <h1>5</h1>
-                            <p>alunos cadastrados</p>
-                        </div>
+                    <div id="q1">
+                        <h1 id="titulo-q1">Gerenciamento de Alunos</h1>
+                        <p>Visualize e gerencie as restrições alimentares dos alunos</p>
                     </div>
 
-                    <div class="minicontainer-conjunto2">
-                        <div id="ajuste"><p>Com Restrições</p><img id="img-attenction" src="{% static 'nutricionista/inicio/img/tema-claro/painel-direito/attenction.png' %}"  alt=""></div>
-                        <div>
-                            <h1>4</h1>
-                            <p>necessitam atenção</p>
-                        </div>
+                    <div id="q2">
+                        
+                        <div id="input-div"><img src="{% static 'nutricionista/alunos/img/tema-claro/outros/lupa.png' %}" alt=""><input id="input-q2" type="text" placeholder="Buscar por nome ou matrícula..."></div>
+
                     </div>
 
-                    <div class="minicontainer-conjunto2">
-                        <div id="ajuste"><p>Cardápios Ativos</p><img src="{% static 'nutricionista/inicio/img/tema-claro/painel-direito/save.png' %}"  alt=""></div>
-                        <div>
-                            <h1>5</h1>
-                            <p>dias cadastrados</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="conjunto3">
-                    <h1 id="titulo-conjunto3">Alertas Recentes</h1>
-
-                        <div id="minicontainer-conjunto3">
-                            <img src="{% static 'nutricionista/inicio/img/tema-claro/painel-direito/attenction.png' %}" alt="">
-                            <div>
-                                <h3 id="titulo-alerta">3 alunos afetados pelo cardápio de segunda-feira</h3>
-                                <p id="frase-alerta">Pudim de leite contém lactose</p>
-                            </div>
-                        </div>
-                </div>
-
-                <div class="conjunto4">
-                    <h1>Pratos Mais Servidos</h1>
-
-                    <div class="conjunto4-imagens">
-                        <div><img src="{% static 'nutricionista/inicio/img/tema-claro/outras/e1.png' %}" alt=""><h2>Arroz e Feijão</h2><p>450 porções/semana</p></div>
-                        <div><img src="{% static 'nutricionista/inicio/img/tema-claro/outras/e2.png' %}" alt=""><h2>Frango Grelhado</h2><p>380 porções/semana</p></div>
-                        <div><img src="{% static 'nutricionista/inicio/img/tema-claro/outras/e3.png' %}" alt=""><h2>Saladas</h2><p>320 porções/semana</p></div>
+                    <div id="q3">
+                        <table id="tabela">
+                            <tr id="tabela-principal">
+                                <th>Nome</th>
+                                <th>Matricula</th>
+                                <th>Restrições Alimentares</th>
+                            </tr>
+                            <tr id="conteudo-principal">
+                                <td><p id="td1">Ana Silva Santos</p></td>
+                                <td><p id="td2">20241001</p></td>
+                                <td><p id="td3">Lactose</p></td>
+                            </tr>
+                        </table>
                     </div>
                     
+
                 </div>
 
             </div>
 
-            
-
             <div class="painelbaixo">
 
-                <a class="botaoPainel ativo" href="inicio_nutricionista" id="inicio">
+                <a class="botaoPainel" href="inicio_nutricionista" id="inicio">
                     <img class="img_casa" src="{% static 'nutricionista/inicio/img/tema-escuro/painel-esquerdo/houseWhite.png' %}" alt="">
                     <p>Início</p>
                 </a>
 
-                <a class="botaoPainel" href="alunos_nutricionista" id="restricoes">
+                <a class="botaoPainel ativo" href="alunos_nutricionista" id="restricoes">
                     <img class="img_alerta people" src="{% static 'nutricionista/inicio/img/tema-claro/painel-esquerdo/people.png' %}" alt="">
                     <p>Alunos</p>
                 </a>
@@ -152,12 +126,12 @@
                     <img class="img_cardapio forkSkife" src="{% static 'nutricionista/inicio/img/tema-claro/painel-esquerdo/forkSkife.svg' %}" alt="">
                     <p>Gerenciar Cardápio</p>
                 </a>
+
             </div>
 
         </div>
     </main>
     <script src="{% static 'js_tema/script.js' %}"></script>
-
 </body>
 
 </html>
