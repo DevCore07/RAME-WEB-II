@@ -1,0 +1,547 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #fff;
+    --bg-color-primary: rgb(248,249,250);
+    --bg-color-second: rgba(237, 243, 242);
+    --bg-color-restriction: rgb(254, 244, 228);
+
+    --bg-color-days: #f4f7f6; 
+
+    --bg-color-hover: rgb(248,249,250);
+
+    --text-color: #000;
+    --text-color-second: #fff;
+    --text-restriction: rgb(246, 171, 65);
+    --text-color-green: #0f763d;
+    --texto-claro: #718096;
+
+    --border-color: rgb(229,231,235);
+    --border-color-second: rgba(192, 218, 205);
+    --border-color-restriction: rgb(253, 239, 214);
+
+    --border-color-alert: rgb(253, 233, 198);
+
+    --shadow-color: rgb(216, 216, 216);
+    --shadow-color-second: rgb(194, 194, 194);
+
+    --bg-img-lupa: ;
+    --bg-img-alerta: rgb(253, 238, 212);
+    --bg-img-alerta-second: rgb(252, 228, 186);
+    --bg-img-arquivo: ;
+
+}
+
+:root {
+    
+    --verde-claro: #eaf4ed;
+    --texto-escuro: #2d3748; /* rgb(255, 255, 255) */
+    --borda: #e2e8f0; /* rgb(15, 45, 41) */
+    --alerta-fundo: #fffaf0;
+    --alerta-borda: #feebc8;
+    --alerta-texto: #dd6b20;
+    --vermelho-fundo: #fed7d7;
+    --vermelho-texto: #e53e3e;
+}
+
+
+[data-theme="dark"] {
+    --bg-color: #1a1e25;
+    --bg-color-primary: rgb(15, 20, 25);
+    --bg-color-second: #0f2121;
+    --bg-color-restriction: rgb(51, 45, 34);
+
+    --bg-color-days: rgb(15, 20, 25);
+
+    --bg-color-hover: rgba(28, 35, 46);
+
+    --text-color: #ffffff;
+    --text-restriction: rgb(190, 135, 16);
+
+    --border-color: rgb(51, 60, 75);
+    --border-color-alert: rgb(74, 58, 32);
+    --border-color-restriction: rgb(80, 62, 31);
+
+    --shadow-color: rgb(15, 20, 25);
+    --shadow-color-second: rgb(15, 20, 25);
+
+    --bg-img-lupa: ;
+    --bg-img-alerta: rgb(59, 50, 34);
+    --bg-img-alerta-second: rgb(86, 66, 30);
+    --bg-img-arquivo: ;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    color: var(--text-color);
+    background-color: var(--bg-color-primary);
+    margin: 0px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+header {
+    position: fixed;
+    width: 100%;
+    background-color: var(--bg-color);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    height: 85px;
+    z-index: 1;
+}
+
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 15px;
+    border-left: solid 0.5px;
+    border-color: var(--border-color);
+}
+
+.btn_tema, .btn_sair {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn_tema:hover {
+    background-color: var(--bg-color-primary);
+    transition: 0.2s ease;
+    
+}
+
+.btn_tema img, .btn_sair img {
+    width: 20px;
+}
+
+
+.btn_sair:hover {
+    background-color: rgb(255, 126, 126);
+    transition: 0.2s ease;
+
+}
+
+
+.user {
+    border: none;
+    width: 120px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: var(--bg-color-second);
+    color: rgb(36, 180, 74);
+    gap: 5px;
+}
+
+.user img {
+    width: 20px;
+}
+
+.site {
+    display: flex;
+    min-height: 100vh;
+    padding-top: 85px;
+
+}
+
+
+.painelbaixo {
+    display: none;
+    padding: 5px 10px;
+    background-color: var(--bg-color);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.painelbaixo .botaoPainel.ativo:hover {
+    background-color: #238b50;
+    color: white;
+}
+
+.painelbaixo .botaoPainel:hover {
+    background-color: rgb(183,214,198);
+    color: #238b50;
+
+}
+
+.painelesquerdo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--bg-color);
+    border-right: 1px solid var(--border-color);
+    width: 250px;
+    min-width: 250px;
+    /* height: 125vh; */
+    padding: 10px 0 ;
+    gap: 5px;
+}
+
+.botaoPainel {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    gap: 20px;
+    width: 90%;
+    height: 45px;
+    border-radius: 15px;
+    transition: 0.1s ease;
+    color: var(--text-color);
+}
+
+.botaoPainel.ativo {
+    background-color: #238b50;
+    color: var(--text-color-second);
+    width: 92%; 
+}
+
+
+.painelesquerdo .botaoPainel.ativo:hover {
+    background-color: #238b50;
+    color: var(--text-color-second);
+}
+
+.painelesquerdo .botaoPainel:hover {
+    background-color: rgb(183,214,198);
+    color: #238b50;
+    scale: 1.01;
+}
+
+.botaoPainel img {
+    width: 25px;
+    height: 25px;
+}
+
+/* Estrutura do Topo */
+.conteudo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    background-color: var(--verde-claro);
+    padding: 6px 12px;
+    border-radius: 20px;
+    color: var(--text-color-green);
+    font-weight: 500;
+}
+
+/* Centro do Painel */
+.painel {
+    flex: 1;
+    padding: 30px;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.bloco-aviso {
+    background-color: var(--bg-color-second);
+    padding: 20px 25px;
+    border-radius: 12px;
+    border: 1px solid rgba(15, 118, 61, 0.1);
+    margin-bottom: 25px;
+}
+
+.bloco-aviso h2 {
+    color: var(--text-color);
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.bloco-aviso p {
+    color: var(--texto-claro);
+    font-size: 14px;
+}
+
+/* Abas */
+.abas-semana {
+    background-color: var(--bg-color);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 25px;
+}
+
+.txt-pequeno {
+    font-size: 13px;
+    color: var(--texto-claro);
+    display: block;
+    margin-bottom: 12px;
+}
+
+.botoes-dias {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.btn-dia {
+    background-color: var(--bg-color-days); 
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 500;
+    color: #0f763d;
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    transition: all 0.2s ease;
+}
+
+.btn-dia:hover:not(.ativo) {
+    background-color: #e2e8f0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Lista de Cards */
+.titulo-sessao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.titulo-dia {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-color); 
+    display: none;
+}
+
+.btn-add {
+    background-color: var(--text-color-green);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+}
+
+.btn-add:hover {
+    background-color: #0b592e;
+    transform: translateY(-1px);
+}
+
+.lista-alimentos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background-color: var(--bg-color);
+    border: solid var(--border-color) 1px; 
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(15, 118, 61, 0.3);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+}
+
+.card-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.card-txt h4 {
+    font-size: 15px;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+.tag-ok {
+    font-size: 11px;
+    color: var(--texto-claro);
+}
+
+.card.card-alerta {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0;
+}
+
+.card-cima {
+    display: flex;
+    gap: 15px;
+    padding: 15px 15px 10px 15px;
+    align-items: center;
+}
+
+.tag-ruim {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.tag-ruim.lactose {
+    background-color: var(--vermelho-fundo);
+    color: var(--vermelho-texto);
+}
+
+.tag-ruim.gluten {
+    background-color: #fee2e2;
+    color: #991b1b;
+}
+
+.barra-alerta {
+    background-color: var(--alerta-fundo);
+    border-top: 1px solid var(--alerta-borda);
+    padding: 10px 15px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    color: var(--alerta-texto);
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+}
+
+/* Botao Final */
+.btn-salvar {
+    background-color: var(--text-color-green);
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: all 0.2s ease;
+}
+
+.btn-salvar:hover {
+    background-color: #0b592e;
+    box-shadow: 0 4px 12px rgba(15, 118, 61, 0.2);
+}
+
+.btn-add:active, .btn-salvar:active, .btn-dia:active {
+    transform: translateY(1px);
+}
+
+.aba-radio {
+    display: none;
+}
+
+#seg:checked ~ .conteudo .b-seg,
+#ter:checked ~ .conteudo .b-ter,
+#qua:checked ~ .conteudo .b-qua,
+#qui:checked ~ .conteudo .b-qui,
+#sex:checked ~ .conteudo .b-sex { 
+    background-color: var(--text-color-green); 
+    color: white; 
+}
+
+#seg:checked ~ .conteudo .t-seg,
+#ter:checked ~ .conteudo .t-ter,
+#qua:checked ~ .conteudo .t-qua,
+#qui:checked ~ .conteudo .t-qui,
+#sex:checked ~ .conteudo .t-sex { 
+    display: block; 
+}
+
+@media (max-width: 900px) { 
+    .nome_projeto{
+        display: none;
+    }
+
+    .painelesquerdo {
+        display: none;
+    }
+
+    .painelbaixo {
+        display: flex;
+        gap: 5px;
+        border: 1px solid var(--border-color);
+
+    }
+
+    .botaoPainel {
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+        gap: 10px;
+        height: auto;
+        border-radius: 15px;
+        margin: 0%;
+    }
+
+    .site {
+        height: 1100px;
+        /* max-height: 1500px; */
+    }
+
+}

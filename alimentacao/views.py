@@ -38,3 +38,6 @@ def inicio_nutricionista(request):
 
 def alunos_nutricionista(request):
     return render(request, 'nutricionista/alunos/alunos.html')
+
+def gerenciar_cardapio_nutricionista(request):
+    return render(request, 'nutricionista/gerenciar_cardapio/cardapio_nutricionista.html')

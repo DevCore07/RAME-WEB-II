@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -6,8 +7,49 @@
     <title>RAME - Gerenciar Cardápio Semanal</title>
     <link rel="stylesheet" href="StyleCardapioNutri.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'nutricionista/gerenciar_cardapio/css/style.css' %}">
 </head>
 <body>
+    <header>
+        <div class="header-left">
+
+            <div class="logo">
+                <img src="{% static 'aluno/inicio/img/tema_claro/header/foto_devcore_verde-removebg-preview.png' %}" width="50px" height="50px">
+            </div>
+
+            <div class="container-nome-projeto">
+                <div>
+                    <h1>RAME</h1>
+                </div>
+                <div>
+                    <p class="nome_projeto" style="color: rgb(122,128,141);">Rede Alimentar de Monitoramento Estudantil</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="header-right">
+
+            <button class="btn_tema" id="btn-decoracao">
+                <img class="img_tema" src="{% static 'aluno/inicio/img/tema_claro/header/moon-svgrepo-com.svg' %}" alt="">
+            </button>
+
+            <div class="menu-user">
+
+                <div class="user">
+                    <img src="{% static 'aluno/inicio/img/tema_claro/header/user-alt-1-svgrepo-com.svg' %}" alt="">
+                    <p>Nutricionista</p>
+                </div>
+
+                
+            </div>
+
+            <a class="btn_sair" href="/">
+                <img class="img_sair" src="{% static 'aluno/inicio/img/tema_claro/header/logout-svgrepo-com.svg' %}" alt="">
+            </a>
+
+        </div>
+    </header>
     
     <div class="site">
         <input type="radio" name="dia" id="seg" class="aba-radio">
@@ -16,33 +58,26 @@
         <input type="radio" name="dia" id="qui" class="aba-radio" checked>
         <input type="radio" name="dia" id="sex" class="aba-radio">
 
-        <aside class="lateral">
-            <div class="logo">
-                <div class="logo-ico">R</div>
-                <div class="logo-txt">
-                    <h1>RAME</h1>
-                    <p>Rede Alimentar de Monitoramento Estudantil</p>
-                </div>
-            </div>
-            
-            <nav class="nav">
-                <a href="#" class="link"><i class="fa-solid fa-house"></i> Início</a>
-                <a href="#" class="link"><i class="fa-solid fa-users"></i> Alunos</a>
-                <a href="#" class="link ativo"><i class="fa-solid fa-utensils"></i> Gerenciar Cardápio</a>
-            </nav>
-        </aside>
+        <div class="painelesquerdo">
+
+            <a class="botaoPainel" href="inicio_nutricionista" id="inicio">
+                <img class="img_casa" src="{% static 'nutricionista/inicio/img/tema-escuro/painel-esquerdo/houseWhite.png' %}" alt="">
+                <p>Início</p>
+            </a>
+
+            <a class="botaoPainel" href="alunos_nutricionista" id="restricoes">
+                <img class="img_alerta people" src="{% static 'nutricionista/inicio/img/tema-claro/painel-esquerdo/people.png' %}" alt="">
+                <p>Alunos</p>
+            </a>
+
+            <a class="botaoPainel ativo" href="gerenciar_cardapio_nutricionista" id="cardapio">
+                <img class="img_cardapio forkSkife" src="{% static 'nutricionista/inicio/img/tema-claro/painel-esquerdo/forkSkife.svg' %}" alt="">
+                <p>Gerenciar Cardápio</p>
+            </a>
+
+        </div>
 
         <main class="conteudo">
-            <header class="topo">
-                <div class="topo-usuario">
-                    <button class="btn-icone"><i class="fa-regular fa-moon"></i></button>
-                    <div class="perfil">
-                        <i class="fa-solid fa-user-circle"></i>
-                        <span>Nutricionista</span>
-                    </div>
-                    <button class="btn-icone"><i class="fa-solid fa-right-from-bracket"></i></button>
-                </div>
-            </header>
 
             <section class="painel">
                 <div class="bloco-aviso">
@@ -73,41 +108,60 @@
 
                 <div class="lista-alimentos">
                     <div class="card">
-                        <img src="imagens/Arroz e feijão.jpg" alt="Arroz e Feijão" class="card-img">
+                        <img src="{% static 'nutricionista/gerenciar_cardapio/img/Arroz e feijão.jpg' %}" alt="Arroz e Feijão" class="card-img">
                         <div class="card-txt"><h4>Arroz e Feijão</h4><span class="tag-ok">Sem alérgenos</span></div>
                     </div>
                     <div class="card">
-                        <img src="imagens/Frango Grelhado.jpg" alt="Frango Grelhado" class="card-img">
+                        <img src="{% static 'nutricionista/gerenciar_cardapio/img/Frango Grelhado.jpg' %}" alt="Frango Grelhado" class="card-img">
                         <div class="card-txt"><h4>Frango Grelhado</h4><span class="tag-ok">Sem alérgenos</span></div>
                     </div>
                     <div class="card">
-                        <img src="imagens/Salada Verde.jpg" alt="Salada Verde" class="card-img">
+                        <img src="{% static 'nutricionista/gerenciar_cardapio/img/Salada Verde.jpg' %}" alt="Salada Verde" class="card-img">
                         <div class="card-txt"><h4>Salada Verde</h4><span class="tag-ok">Sem alérgenos</span></div>
                     </div>
                     <div class="card card-alerta">
                         <div class="card-cima">
-                            <img src="imagens/Pudim de Leite.jpg" alt="Pudim de Leite" class="card-img">
+                            <img src="{% static 'nutricionista/gerenciar_cardapio/img/Pudim de Leite.jpg' %}" alt="Pudim de Leite" class="card-img">
                             <div class="card-txt"><h4>Pudim de Leite</h4><span class="tag-ruim lactose">Lactose</span></div>
                         </div>
                         <div class="barra-alerta"><i class="fa-solid fa-triangle-exclamation"></i> <span>2 alunos afetados</span></div>
                     </div>
                     <div class="card card-alerta">
                         <div class="card-cima">
-                            <img src="imagens/Macarrão ao Molho.jpg" alt="Macarrão ao Molho" class="card-img">
+                            <img src="{% static 'nutricionista/gerenciar_cardapio/img/Macarrão ao Molho.jpg' %}"  alt="Macarrão ao Molho" class="card-img">
                             <div class="card-txt"><h4>Macarrão ao Molho</h4><span class="tag-ruim gluten">Glúten</span></div>
                         </div>
                         <div class="barra-alerta"><i class="fa-solid fa-triangle-exclamation"></i> <span>1 aluno afetado</span></div>
                     </div>
                     <div class="card">
-                        <img src="imagens/Almôndegas.jpg" alt="Almôndegas" class="card-img">
+                        <img src="{% static 'nutricionista/gerenciar_cardapio/img/Almôndegas.jpg' %}" alt="Almôndegas" class="card-img">
                         <div class="card-txt"><h4>Almôndegas</h4><span class="tag-ok">Sem alérgenos</span></div>
                     </div>
                 </div>
 
                 <button class="btn-salvar"><i class="fa-regular fa-floppy-disk"></i> Salvar Cardápio</button>
             </section>
+            <div class="painelbaixo">
+
+                <a class="botaoPainel" href="inicio_nutricionista" id="inicio">
+                    <img class="img_casa" src="{% static 'nutricionista/inicio/img/tema-escuro/painel-esquerdo/houseWhite.png' %}" alt="">
+                    <p>Início</p>
+                </a>
+
+                <a class="botaoPainel" href="alunos_nutricionista" id="restricoes">
+                    <img class="img_alerta people" src="{% static 'nutricionista/inicio/img/tema-claro/painel-esquerdo/people.png' %}" alt="">
+                    <p>Alunos</p>
+                </a>
+
+                <a class="botaoPainel ativo" href="gerenciar_cardapio_nutricionista" id="cardapio">
+                    <img class="img_cardapio forkSkife" src="{% static 'nutricionista/inicio/img/tema-claro/painel-esquerdo/forkSkife.svg' %}" alt="">
+                    <p>Gerenciar Cardápio</p>
+                </a>
+
+            </div>
         </main>
     </div>
+    <script src="{% static 'js_tema/script.js' %}"></script>
 
 </body>
 </html>
