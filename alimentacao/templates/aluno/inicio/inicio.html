@@ -95,7 +95,12 @@
                             <div class="restricoes">
                                 <h1>Suas Restrições Alimentares</h1>
                                 <ul>
-                                    <li>Intolerância à Lactose.</li>
+                                    {%  for r in lista %}
+                                        {% if r.status == "ativado" %}
+                                        <li>{{ r.restricao }}</li>
+                                        {% endif%}
+                                    {% endfor %}
+                                    
                                 </ul>
                             </div>
 

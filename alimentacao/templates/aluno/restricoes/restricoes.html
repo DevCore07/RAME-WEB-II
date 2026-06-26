@@ -86,16 +86,23 @@
 
                 <div class="container-conjunto2">
 
-                    <div id="conteudo-q2">
-                        <div class="check-container"><input type="checkbox"> <p>Intolerância à Lactose</p></div>
-                        <div class="check-container"><input type="checkbox"> <p>Intolerância ao Glúten (Celíaco) </p></div>
+                    <form method="POST" id="conteudo-q2">
+                        {% csrf_token %}
+                        {%  for r in lista %}
+                            {% if r.status == "ativado" %}
+                            <div class="check-container"><input name="restricao" type="checkbox" value="{{ r.valor }}" checked> <p>{{ r.restricao }}</p></div>
+                            {% else %}
+                            <div class="check-container"><input name="restricao" type="checkbox" value="{{ r.valor }}"> <p>{{ r.restricao }}</p></div>
+                            {% endif%}
+                        {% endfor %}
+                        <!-- <div class="check-container"><input type="checkbox"> <p>Intolerância ao Glúten (Celíaco)</p></div>
                         <div class="check-container"><input type="checkbox"> <p>Alergias à castanhas/amemdoim</p></div>
                         <div class="check-container"><input type="checkbox"> <p>Alergias à frutos do mar</p></div>
                         <div class="check-container"><input type="checkbox"> <p>Alergia à Ovos</p></div>
-                        <div class="check-container"><input type="checkbox"> <p>Alergia à sojja</p></div>
+                        <div class="check-container"><input type="checkbox"> <p>Alergia à sojja</p></div> -->
                         
-                        <button class="btn-salvar"><h1>Salvar Alterações</h1></button>
-                    </div>
+                        <button type="submit" class="btn-salvar"><h1>Salvar Alterações</h1></button>
+                    </form>
 
                 </div>
 
